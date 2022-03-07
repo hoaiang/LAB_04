@@ -26,5 +26,22 @@ namespace FromDangnhap
         {
 
         }
+
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+            if(txtUserName.Text == "admin" && txtpassword.Text == "admin")
+            {
+                Form2 newForm = new Form2();
+                newForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Login");
+                txtUserName.Clear();
+                txtpassword.Clear();
+            }
+
+        }
     }
 }
